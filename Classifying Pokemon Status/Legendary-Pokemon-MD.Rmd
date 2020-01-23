@@ -1,0 +1,124 @@
+---
+title: "Legendary Pokemon"
+author: "Jason Lee"
+output: html_document
+---
+
+### Overview
+
+For this analysis I'm going to dive into Pokemon ratings and whether or not they are marked as being "Legendary". I will focus on creating a logistic model and a desicion tree model to help predict whether or not a pokemon will be Legendary based on specific variable parameters
+
+### Sample of Data
+```{r setup,include=TRUE, echo=FALSE, message= FALSE, warning = FALSE}
+knitr::opts_chunk$set(include = FALSE)
+library(ggplot2)
+library(gplots)
+library(readr)
+library(rpart)
+library(ROCR)
+library(rpart.plot)
+```
+
+
+```{r summary, include=TRUE, echo=FALSE, message=FALSE, warning = FALSE}
+pkdf <- read.csv("Pokemon.csv")
+head(pkdf)
+```
+
+
+### Logistic Model
+
+##### Test with all the dependent variables first. The model could be improved.
+```{r 1st logistic, include=TRUE, echo=FALSE, message=FALSE, warning = FALSE}
+pk_logit_model <- glm(Legendary ~ Attack + Defense + Sp_Atk + Sp_Def + HP + Speed, data = pkdf, family = "binomial")
+summary(pk_logit_model)
+```
+
+##### Test with deleteing Defense variable:
+```{r 2nd logistic, include=TRUE, echo=FALSE, message=FALSE, warning = FALSE}
+pk_logit_model <- glm(Legendary ~ Attack + Sp_Atk + Sp_Def + HP + Speed, data = pkdf, family = "binomial")
+summary(pk_logit_model)
+```
+
+##### Test with deleteing Speed variable:
+```{r 3rd logistic, include=TRUE, echo=FALSE, message=FALSE, warning = FALSE}
+pk_logit_model <- glm(Legendary ~ Attack + Sp_Atk + Sp_Def + HP, data = pkdf, family = "binomial")
+summary(pk_logit_model)
+```
+We can see from this model that deleteing SPEED produced a good mdoel.
+
+Looking at the results from this model we can interpret the coeffiencent of Attack as if Attack increases by 1 point, chance of this Pokemon being legendary increases by 3.04%
+
+```{r Attack}
+exp(0.029982)-1
+```
+
+
+
+### Decision Model
+
+Putting all the same variables in one tree.
+```{r tree,include=TRUE, echo=FALSE, message=FALSE, warning = FALSE}
+pk_tree_model <- rpart(Legendary ~  Attack + Sp_Atk + Sp_Def + HP, data = pkdf, method = "class")  #, control=rpart.control(minsplit=50, cp=0.018))
+rpart.plot::rpart.plot(pk_tree_model, type = 1, extra=1, box.palette =c("pink", "green"), branch.lty=3, shadow.col = "gray")
+```
+
+```{r tree summary}
+summary(pk_tree_model)
+```
+
+
+```{r tree plot,include=TRUE, echo=FALSE, message=FALSE, warning = FALSE}
+plotcp(pk_tree_model)
+```
+
+### Comparing the Logisitic Model and the Decision Tree
+
+```{r predict, message=FALSE, warning=FALSE, include=FALSE}
+#predict with logistic regression
+pk_predict_logit <- predict(pk_logit_model, pkdf, type="response")
+print(pk_predict_logit)
+```
+
+```{r log pokemon 59}
+pk_predict_logit[59]
+```
+
+```{r log pokemon 799}
+pk_predict_logit[799]
+```
+
+```{r tree predict, message=FALSE, warning=FALSE, include=FALSE}
+#predict with tree
+pk_predict_tree <- predict(pk_tree_model, pkdf, type="prob")
+print(pk_predict_tree)
+```
+
+```{r results, include=TRUE, echo=FALSE, message=FALSE, warning = FALSE}
+#Storing Model Performance Scores
+pk_logit_prediction <- prediction(pk_predict_logit, pkdf$Legendary)
+pk_tree_prediction <- prediction(pk_predict_tree[,2], pkdf$Legendary) 
+
+#Let's get performance.
+pk_performance_logit <- performance(pk_logit_prediction,"tpr","fpr")
+pk_performance_tree <- performance(pk_tree_prediction,"tpr","fpr")
+
+#Let's plot and compare. The more area under the curve, the better the model is.
+plot(pk_performance_logit,col="blue",lty=3, lwd=3)
+plot(pk_performance_tree,col="black",lty=3, lwd=3, add=TRUE)
+#logistic regression wins!
+```
+
+### Final Thoughts
+
+If we use the model we can try predict two Pokemon ID numbers and determine if they are Legendary.
+
+  Pokemon 59\
+    - Model Prediction: Most likely not legendary\
+    - Actual: Not legendary
+  
+  Pokemon 799\
+    - Model Prediction: Most likely legendary\
+    - Actual: Legendary
+
+Looking at both thesse line chart we can see that Logisitic Model performs better and therefore is a better choice to use when predicting if a Pokemon will be Legendary.
