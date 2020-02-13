@@ -10,3 +10,4 @@ Repository focused on machine learning techniques used on various data sets for 
 - [Gapminder, Life Expectancy](https://github.com/jasonmchlee/machine-learning/tree/master/Gapminder)
 - [Detection of Diabetes](https://github.com/jasonmchlee/machine-learning/tree/master/Diabetes%20Detection)
 - [House Congress](https://github.com/jasonmchlee/machine-learning/tree/master/House%20Congreess)
+- [Kaggle Challenge, Cars](https://github.com/jasonmchlee/machine-learning/tree/master/Auto%20Cars)
