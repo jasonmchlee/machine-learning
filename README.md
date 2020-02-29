@@ -1,5 +1,5 @@
 # Machine Learning
-Repository focused on machine learning techniques used on various data sets for academic, personal and professional projects.
+Repository focused on machine learning projects/techniques/exercise used on various data sets for academic, personal and professional projects.
 
 ## R
 - [Identifying a Pokemon's Status](https://github.com/jasonmchlee/machine-learning/tree/master/Classifying%20Pokemon%20Status)
