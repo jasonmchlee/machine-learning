@@ -4,6 +4,10 @@
     Date: March 7, 2020
     Topic: Machine Learning
 
+<p align="center">
+<img src="https://github.com/jasonmchlee/machine-learning/blob/master/Apprentice%20Chef%20-%20Revenue%20Predicition/Cover%20Photo.png" width="400" height="250">
+</p>
+
 # Company Information
  
 Apprentice Chef, Inc. is an innovative company with a unique spin on cooking at home. Developed for the busy professional that has little to no skills in the kitchen, they offer a wide selection of daily-prepared gourmet meals delivered directly to your door.
