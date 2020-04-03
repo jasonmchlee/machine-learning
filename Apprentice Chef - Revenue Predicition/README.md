@@ -5,7 +5,7 @@
     Topic: Machine Learning
 
 <p align="center">
-<img src="https://github.com/jasonmchlee/machine-learning/blob/master/Apprentice%20Chef%20-%20Revenue%20Predicition/Cover%20Photo.png" width="400" height="250">
+<img src="https://github.com/jasonmchlee/machine-learning/blob/master/Apprentice%20Chef%20-%20Revenue%20Predicition/Apprentice%20Chef%20-%20Cover%20Photo.png" width="600" height="350">
 </p>
 
 # Company Information
