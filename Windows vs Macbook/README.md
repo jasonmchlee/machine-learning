@@ -20,7 +20,7 @@ In this analysis we will look into 392 survey responders that answered 77 questi
 
 After exploration, we will organize our data and utilize unsupervised machine learning techniques - PCAs and Clustering to determine the types of customer that would purchase either a Macbook or Windows computer. Our goal is to help Microsoft determine unique customers that can be isolated and find out which customers are more inclined to remain or switch from their current laptop owned.
 
-### Data Source: 392 Hult Graduate Students
+### Data Source: [392 Hult Graduate Students](https://github.com/jasonmchlee/machine-learning/blob/master/Windows%20vs%20Macbook/Survey_Data_Final_Exam.xlsx)
 
 # REPORT CONTENTS
 
