@@ -1,7 +1,6 @@
 # Apprentice Chef Case Study - Revenue Prediction
 
     Owner: Jason Lee
-    Date: March 7, 2020
     Topic: Machine Learning
 
 <p align="center">
