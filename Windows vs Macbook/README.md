@@ -1,4 +1,4 @@
-# MACHINE LEARNING - UNPSUPERVISED LEARNING
+# MACHINE LEARNING - UNSUPERVISED LEARNING
 <p align="center">
 <img src="https://github.com/jasonmchlee/machine-learning/blob/master/Windows%20vs%20Macbook/Cover%20Photo.png" width="500" height="300">
 </p>    
