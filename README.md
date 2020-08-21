@@ -9,6 +9,7 @@ Repository focused on machine learning projects/techniques/exercises used on var
 - [Detection of Diabetes](https://github.com/jasonmchlee/machine-learning/tree/master/Diabetes%20Detection)
 - [House Congress](https://github.com/jasonmchlee/machine-learning/tree/master/House%20Congreess)
 - [Kaggle Challenge, Cars](https://github.com/jasonmchlee/machine-learning/tree/master/Auto%20Cars)
+- [Ames Housing](https://github.com/jasonmchlee/machine-learning/tree/master/Ames%20Housing)
 
 ## R
 - [Identifying a Pokemon's Status](https://github.com/jasonmchlee/machine-learning/tree/master/Classifying%20Pokemon%20Status)
