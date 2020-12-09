@@ -1,4 +1,8 @@
 # Exploring FIFA 20 to Predict Player’s Potential
+[Full Report](https://github.com/jasonmchlee/machine-learning/blob/master/FIFA%2020/FIFA%2020%20-%20A%20Guide%20to%20Ultimate%20Team.pdf)
+
+----------------------
+
 ## Background
 FIFA 2020 is one of the world's most popular video games. It is a football simulation video game
 published by Electronic Arts (EA Sports) as part of the FIFA series. It is the 27th installment in
@@ -16,6 +20,8 @@ in-game content or live services. Gamers looking to take advantage of in-game pu
 finding hidden gems, players with high potential, or already established superstars to build their
 team.
 
+----------------------
+
 ## Goal
 This document explores in-game players from the FIFA 20 database to understand how
 different characteristics, traits, demographics, and more influence players' overall rating and
@@ -26,6 +32,8 @@ Uncovering a player's potential is vital for the gameplay experience because it 
 insights on which players have the most upsell or player development opportunities. This
 strategy will give EA sports the resources to price individual players higher/lower based on their
 potential score, thus converting in-app purchases.
+
+----------------------
 
 ## Report Summary
 - 568 out of 18,278 players in the FIFA 20 database recorded ≥ 80 overall ratings. An 80
@@ -55,6 +63,8 @@ relationship. The GK wears #1, defenders between #2 - #6, then midfielders and s
 #7 - #11.
 - For ≥ 80 overall ratings, 80% of the top 10 countries represented are in Europe, except
 Brazil and Argentina (South America region), with Spain the most represented country.
+
+----------------------
 
 ## Model Summary
 - Building a model to predict a player's potential, we can see that developing features
