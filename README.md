@@ -3,6 +3,7 @@ Repository focused on machine learning projects/techniques/exercises used on var
 
 ## Python
 - [Windows vs Macbook - Unsupervised Learning](https://github.com/jasonmchlee/machine-learning/tree/master/Windows%20vs%20Macbook)
+- [FIFA 20 - Predict Player’s Potential (Regression)](https://github.com/jasonmchlee/machine-learning/tree/master/FIFA%2020)
 - [Apprentice Chef - Revenue Prediction (Regression)](https://github.com/jasonmchlee/machine-learning/tree/master/Apprentice%20Chef%20-%20Revenue%20Predicition)
 - [Gapminder, Life Expectancy](https://github.com/jasonmchlee/machine-learning/tree/master/Gapminder)
 - [Women's Breast Cancer](https://github.com/jasonmchlee/machine-learning/tree/master/Women%20Breast%20Cancer)
